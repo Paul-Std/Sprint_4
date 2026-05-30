@@ -1,7 +1,8 @@
-package PageObjectMain;
+package page.objects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class PageOrderOne {
     private WebDriver driver;
@@ -38,5 +39,9 @@ public class PageOrderOne {
 
     public void clickOnwardButton() {
         driver.findElement(onwardButton).click();
+    }
+
+    public WebElement findSubway(Integer stationIndex) {
+        return driver.findElement(By.xpath(".//li[@data-index='" + stationIndex + "']"));
     }
 }
